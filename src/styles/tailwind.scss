@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// 1-6行隐藏
+@for $i from 1 through 6 {
+  .truncate-#{$i} {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: #{$i};
+    -webkit-box-orient: vertical;
+  }
+}
